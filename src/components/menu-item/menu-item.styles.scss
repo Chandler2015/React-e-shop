@@ -1,18 +1,4 @@
-.homepage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 80px;
-  }
-  
-  .directory-menu {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .menu-item {
+.menu-item {
     min-width: 30%;
     height: 240px;
     flex: 1 1 auto;
@@ -21,7 +7,13 @@
     justify-content: center;
     border: 1px solid black;
     margin: 0 7.5px 15px;
-  
+    background-position: center;
+    background-size:cover;
+
+    &.large{
+      height: 380px;
+    }
+
     &:first-child {
       margin-right: 7.5px;
     }
@@ -29,6 +21,8 @@
     &:last-child {
       margin-left: 7.5px;
     }
+
+    
   
     .content {
       height: 90px;
@@ -38,7 +32,17 @@
       align-items: center;
       justify-content: center;
       border: 1px solid black;
-  
+      background-color:white;
+      opacity: 0.7;
+
+      &:hover{
+        cursor:pointer;
+        opacity:0.4;
+        background-color:burlywood;
+        transform:scale(1.2);
+        transition:transform 2s;
+      }
+
       .title {
         font-weight: bold;
         margin-bottom: 6px;
