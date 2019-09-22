@@ -3,6 +3,8 @@ import './signin.styles.scss';
 import { thisExpression } from '@babel/types';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-buttom.component';
+import {signInWithGoogle} from '../../firebase/firebase.utils';
+
 
 class Signin extends React.Component{
     constructor(props){
@@ -36,8 +38,11 @@ class Signin extends React.Component{
                     <FormInput name='password'  type = 'password' value={this.state.password} 
                     handleChange={this.handleChange} label= 'password' required/>
                    
-
-                    <CustomButton type='submit'>Sign In</CustomButton>
+                    <div className='buttons'>
+                        <CustomButton type='submit'>Sign In</CustomButton>
+                        <CustomButton onClick={signInWithGoogle} isGoogleSignin>Sign In with Google</CustomButton>
+                    </div>
+                    
                 </form>
             </div>
         )
