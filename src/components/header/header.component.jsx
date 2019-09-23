@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
+import CartIcon from '../cart-icon/cart-icon.component';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 
@@ -20,6 +21,7 @@ const Header = ({currentUser}) => (
       <Link className='option' to='/shop'>
         CONTACT
       </Link>
+     
 
       {
           currentUser?
@@ -27,6 +29,7 @@ const Header = ({currentUser}) => (
           :
           <Link className='option' to ='/Signin'>Sign In</Link>
       }
+      <CartIcon/>
     </div>
   </div>
 );
